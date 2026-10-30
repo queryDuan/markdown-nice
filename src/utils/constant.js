@@ -146,6 +146,11 @@ export const TEMPLATE_OPTIONS = [
     author: "aco",
   },
   {
+    id: "Obsidian",
+    macId: "Obsidian",
+    name: "Obsidian",
+  },
+  {
     id: "custom",
     name: "自定义",
     author: "",
