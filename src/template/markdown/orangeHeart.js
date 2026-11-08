@@ -1,4 +1,14 @@
-export default `/* 全局属性
+export default `/* ============================================================
+   OrangeHeart（橙心）· 精致微调版
+   ------------------------------------------------------------
+   基于你提供的官方 OrangeHeart.css 修改，共 13 处微调，
+   【保留】橙心全部结构与标志性橙色标题块，只调数值和配色。
+   每处改动都带 ✎ 注释，方便逐条核对或删回。
+   用法：mdnice → 查看 → 主题 CSS 区域 → 切「自定义」→ 全选替换。
+   配色参考：封面琥珀橙 #ffb35c / 深蓝紫 #1a1436
+   ============================================================ */
+
+/* 全局属性
  * 页边距 padding: 30px;
  * 全文字体 font-family: ptima-Regular;
  * 英文换行 word-break: break-all;
@@ -10,7 +20,7 @@ export default `/* 全局属性
     width: auto;
     font-family: Optima, "Microsoft YaHei", PingFangSC-regular, serif;
     font-size: 16px;
-    color: rgb(0, 0, 0);
+    color: #3a3a42;   /* ✎ 微调1 纯黑改柔和深灰，降低手机屏对比压迫 */
     line-height: 1.5em;
     word-spacing: 0em;
     letter-spacing: 0em;
@@ -30,7 +40,7 @@ export default `/* 全局属性
     border-style: none;
     border-width: 3px;
     border-color: rgba(0, 0, 0, 0.4);
-    border-radius: 0px;
+    border-radius: 4px;   /* ✎ 微调2 图片加淡圆角 */
     object-fit: fill;
     box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px;
 }
@@ -52,9 +62,9 @@ export default `/* 全局属性
 
 #nice .custom-blockquote {
     margin: 20px 0px;
-    padding: 10px 10px 10px 20px;
+    padding: 12px 14px 12px 18px;   /* ✎ 微调3 内边距更匀 */
     border-style: none none none solid;
-    border-width: 3px;
+    border-width: 2px;   /* ✎ 微调3 边框 3px->2px */
     border-color: rgba(0, 0, 0, 0.4) rgba(0, 0, 0, 0.4) rgba(0, 0, 0, 0.4) rgb(239, 112, 96);
     border-radius: 0px;
     background: none 0% 0% / auto no-repeat scroll padding-box border-box rgb(255, 249, 249);
@@ -85,7 +95,7 @@ export default `/* 全局属性
  * 首行缩进 text-indent: 2em;
  */
 #nice p {
-    color: rgb(0, 0, 0);
+    color: #3a3a42;   /* ✎ 微调1 段落同正文色 */
     font-size: 16px;
     line-height: 1.8em;
     letter-spacing: 0em;
@@ -95,15 +105,15 @@ export default `/* 全局属性
     padding: 8px 0px;
 }
 #nice * {
-    cursor: pointer;
+    cursor: auto;   /* ✎ 微调4 原为 pointer，整篇文字都显示手型，去掉 */
 }
 
 #nice hr {
-    margin: 10px 0px;
+    margin: 24px 0px;   /* ✎ 微调5 上下留白 10px->24px，分节更清楚 */
     padding: 0px;
     border-style: solid none none;
-    border-width: 1px 3px 3px;
-    border-color: rgb(0, 0, 0) rgba(0, 0, 0, 0.4) rgba(0, 0, 0, 0.4);
+    border-width: 1px 0px 0px;   /* ✎ 微调5 只留上边线 */
+    border-color: #e6e6ea #e6e6ea #e6e6ea;   /* ✎ 微调5 纯黑->淡灰 */
     border-radius: 0px;
     background: none 0% 0% / auto no-repeat scroll padding-box border-box rgba(0, 0, 0, 0);
     width: auto;
@@ -120,7 +130,7 @@ export default `/* 全局属性
 /* 一级标题内容 */
 #nice h1 .content {
     font-size: 24px;
-    color: rgb(0, 0, 0);
+    color: #1a1436;   /* ✎ 微调6 深蓝紫，对齐封面主色 */
     line-height: 1.5em;
     letter-spacing: 0em;
     text-align: left;
@@ -138,7 +148,7 @@ export default `/* 全局属性
 
 /* 二级标题 */
 #nice h2 {
-    border-color: rgb(0, 0, 0) rgb(0, 0, 0) rgb(239, 112, 96);
+    border-color: transparent transparent rgba(239, 112, 96, 0.4);   /* ✎ 微调7 下边框改淡橙 */
     margin: 30px 0px 15px;
     padding: 0px;
     align-items: unset;
@@ -151,7 +161,7 @@ export default `/* 全局属性
     background-repeat: no-repeat;
     background-size: auto;
     border-style: none none solid;
-    border-width: 1px 1px 2px;
+    border-width: 0px 0px 1px;   /* ✎ 微调7 2px->1px */
     border-radius: 0px;
     box-shadow: none;
     display: flex;
@@ -171,7 +181,7 @@ export default `/* 全局属性
 
 /* 二级标题内容 */
 #nice h2 .content {
-    font-size: 22px;
+    font-size: 20px;   /* ✎ 微调8 22->20，手机上更秀气 */
     color: rgb(255, 255, 255);
     background: none 0% 0% / auto no-repeat scroll padding-box border-box rgb(239, 112, 96);
     line-height: 1.5em;
@@ -180,7 +190,7 @@ export default `/* 全局属性
     border-style: none;
     border-width: 1px;
     border-color: rgb(0, 0, 0);
-    border-radius: 3px 3px 0px 0px;
+    border-radius: 5px 5px 0px 0px;   /* ✎ 微调8 圆角 3->5 */
     box-shadow: none;
     content: unset;
     display: inline-block;
@@ -191,7 +201,7 @@ export default `/* 全局属性
     justify-content: unset;
     margin: 0px 5px 0px 0px;
     overflow: unset;
-    padding: 3px 10px 1px;
+    padding: 5px 14px 4px;   /* ✎ 微调8 上下留白，白字不贴边 */
     position: relative;
     text-align: left;
     text-indent: 0em;
@@ -209,7 +219,7 @@ export default `/* 全局属性
 
 /* 二级标题修饰 请参考有实例的主题 */
 #nice h2:after {
-    border-color: rgb(0, 0, 0) transparent rgb(239, 235, 233) rgb(0, 0, 0);
+    border-color: rgb(0, 0, 0) transparent rgb(239, 235, 233) rgb(0, 0, 0);   /* 官方原值：上/左为 none，黑色不渲染 */
     align-items: unset;
     background-attachment: scroll;
     background-clip: border-box;
@@ -220,7 +230,7 @@ export default `/* 全局属性
     background-repeat: no-repeat;
     background-size: auto;
     border-style: none solid solid none;
-    border-width: 1px 20px 36px 1px;
+    border-width: 1px 14px 24px 1px;   /* ✎ 微调9 折角 20x36 -> 14x24，更含蓄 */
     border-radius: 0px;
     box-shadow: none;
     color: rgb(0, 0, 0);
@@ -256,7 +266,7 @@ export default `/* 全局属性
 /* 三级标题内容 */
 #nice h3 .content {
     font-size: 20px;
-    color: rgb(0, 0, 0);
+    color: #1a1436;   /* ✎ 微调6 */
     line-height: 1.5em;
     letter-spacing: 0em;
     text-align: left;
@@ -281,7 +291,7 @@ export default `/* 全局属性
     color: rgb(0, 0, 0);
 }
 #nice ul li section {
-    color: rgb(1, 1, 1);
+    color: #3a3a42;   /* ✎ 微调1 */
     font-size: 16px;
     line-height: 1.8em;
     letter-spacing: 0em;
@@ -306,7 +316,7 @@ export default `/* 全局属性
 /* 列表内容，不要设置li
  */
 #nice ol li section {
-    color: rgb(1, 1, 1);
+    color: #3a3a42;   /* ✎ 微调1 */
     font-size: 16px;
     line-height: 1.8em;
     letter-spacing: 0em;
@@ -324,9 +334,9 @@ export default `/* 全局属性
  */
 #nice blockquote {
     margin: 20px 0px;
-    padding: 10px 10px 10px 20px;
+    padding: 12px 14px 12px 18px;   /* ✎ 微调3 */
     border-style: none none none solid;
-    border-width: 3px;
+    border-width: 2px;   /* ✎ 微调3 */
     border-color: rgba(0, 0, 0, 0.4) rgba(0, 0, 0, 0.4) rgba(0, 0, 0, 0.4) rgb(239, 112, 96);
     border-radius: 0px;
     background: none 0% 0% / auto no-repeat scroll padding-box border-box rgb(255, 249, 249);
@@ -359,7 +369,7 @@ export default `/* 全局属性
     letter-spacing: 0em;
     text-align: left;
     font-weight: bold;
-    background: none 0% 0% / auto no-repeat scroll padding-box border-box rgb(240, 240, 240);
+    background: none 0% 0% / auto no-repeat scroll padding-box border-box rgb(250, 247, 243);   /* ✎ 微调10 冷灰->暖白，贴合橙调 */
     width: auto;
     height: auto;
     border-style: solid;
@@ -400,12 +410,12 @@ export default `/* 全局属性
  */
 #nice a {
   color: rgb(239, 112, 96);
-  border-bottom: 1px solid rgb(239, 112, 96);
+  border-bottom: 1px solid rgba(239, 112, 96, 0.35);   /* ✎ 微调11 下划线淡化 */
 }
 
 /* 加粗 */
 #nice strong {
-    color: rgb(0, 0, 0);
+    color: #1a1436;   /* ✎ 微调12 加粗用深蓝紫，让重点句轻轻跳出来，但仍不是彩色 */
     font-weight: bold;
     background: none 0% 0% / auto no-repeat scroll padding-box border-box rgba(0, 0, 0, 0);
     width: auto;
@@ -470,14 +480,14 @@ export default `/* 全局属性
     font-size: 14px;
     line-height: 1.8em;
     letter-spacing: 0em;
-    background: none 0% 0% / auto no-repeat scroll padding-box border-box transparent;
+    background: rgba(239, 112, 96, 0.08);   /* ✎ 微调13 淡橙底，代码更成形 */
     width: auto;
     height: auto;
     border-style: none;
     border-width: 3px;
     border-color: rgb(0, 0, 0) rgba(0, 0, 0, 0.4) rgba(0, 0, 0, 0.4);
     overflow-wrap: break-word;
-    padding: 2px 4px;
+    padding: 2px 5px;
     border-radius: 4px;
     margin: 0px 2px;
     font-family: "Operator Mono", Consolas, Monaco, Menlo, monospace;
@@ -564,7 +574,7 @@ export default `/* 全局属性
 #nice .footnotes-sep::before {
     display: block;
     content: "参考资料";
-    color: rgb(0, 0, 0);
+    color: #1a1436;   /* ✎ 微调6 */
     font-size: 18px;
     line-height: 1.5em;
     letter-spacing: 0em;
@@ -605,7 +615,7 @@ export default `/* 全局属性
     letter-spacing: 0em;
 }
 #nice .footnote-item p em {
-    color: rgb(0, 0, 0);
+    color: #3a3a42;   /* ✎ 微调1 */
     font-weight: normal;
     font-style: italic;
     background: none 0% 0% / auto no-repeat scroll padding-box border-box rgba(0, 0, 0, 0);
@@ -617,7 +627,7 @@ export default `/* 全局属性
     border-radius: 0px;
 }
 #nice em {
-    color: rgb(0, 0, 0);
+    color: #3a3a42;   /* ✎ 微调1 */
     font-style: italic;
     background: none 0% 0% / auto no-repeat scroll padding-box border-box rgba(0, 0, 0, 0);
     width: auto;
